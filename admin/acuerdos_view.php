@@ -31,8 +31,6 @@
                                         echo "Error al eliminar";
                                         echo "</div>";
                                     }
-
-
                     ?>
                         <div class="card">
                             <div class="card-title">

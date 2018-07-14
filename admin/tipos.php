@@ -92,20 +92,20 @@
                                 </form>
                                     </div>
                                     <div class="tab-pane p-20" id="messages" role="tabpanel">
-                                             <form action="logica/user_delete.php" method="POST">
+                                             <form action="logica/tipo_delete.php" method="POST">
                                     <div class="form-body">
                                         <div class="row p-t-20">                                            <!--/span-->
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                     <label>Tipos</label>
-                                                    <select class="form-control custom-select" required="" name="id_user">
+                                                    <select class="form-control custom-select" required="" name=tipo_id>
                                                         <option value=""></option>
                                                         <?php
                                                           if(!isset($conexion)){ include("../config/conexion.php");}
                                                           $sql = "SELECT * FROM tipo";
                                                           $ejecutar = $conexion->query($sql);
                                                           while($reg = $ejecutar->fetch_assoc()){
-                                                            echo "<option value=".$reg["tipo_acuerdo"].">".($reg["tipo_acuerdo"])."</option>";
+                                                            echo "<option value=".$reg["id"].">".($reg["tipo_acuerdo"])."</option>";
                                                              }
                                                             ?>
                                                     </select>

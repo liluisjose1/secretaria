@@ -9,10 +9,10 @@ $sql = "DELETE FROM `acuerdos` WHERE `id`='$id'";
 		$ejecutar_consulta = $conexion->query(($sql));
 
 			if($ejecutar_consulta){
-				header("Location: ../acuerdos.php?error=no");
+				header("Location: ../acuerdos_view.php?error=no");
 			}
 			else{
-				header("Localtion: ../acuerdos.php?error=si");
+				header("Localtion: ../acuerdos_view.php?error=si");
 			}
 
  ?>

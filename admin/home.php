@@ -6,10 +6,6 @@ include("../config/conexion.php");
 $sqlu = "SELECT COUNT(*) AS Total FROM usuario";
 $ejecutar_consultau = $conexion->query($sqlu);
 $user = mysqli_fetch_row($ejecutar_consultau);
-//consejo
-$sqlc = "SELECT COUNT(*) AS Total FROM consejo";
-$ejecutar_consultac = $conexion->query($sqlc);
-$consejo = mysqli_fetch_row($ejecutar_consultac);
 //acuerdos
 $sqlp = "SELECT COUNT(*) AS Total FROM acuerdos";
 $ejecutar_consultap = $conexion->query($sqlp);

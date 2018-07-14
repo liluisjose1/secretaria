@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/min_r.png">
-    <title>UPS | UES FMO</title>
+    <title>Secretaria | UES FMO</title>
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/lib/bootstrap/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -47,9 +47,9 @@
                                         echo "<button type='button' class='close' data-dismiss='alert'>&times;</button>";
                                         echo "Instroduzca credenciales validas";
                                         echo "</div>";
-                                    } 
+                                    }
 
-                                    
+
                                 ?>
                                 <!-- <p>Login UPS-FMO</p> -->
                                 <center><img style="width: 100px" src="assets/images/min_r.png"></center>
