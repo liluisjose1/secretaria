@@ -18,7 +18,7 @@
 	{
 		$servidor 	=	 "localhost";
 		$usuario 	=	 "root";
-		$password 	=	 "123456";
+		$password 	=	 "";
 		$bd 		=	 "secretaria";
 
 		$conectar = new mysqli($servidor, $usuario, $password, $bd);

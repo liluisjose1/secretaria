@@ -1,3 +1,43 @@
+<?php
+include("../config/conexion.php");
+error_reporting(0);
+
+//busqueda n_cuaerdo 
+$id=$_POST['n_acuerdo'];
+$id1=$_POST['n_acuerdo1'];
+$id2=$_POST['n_acuerdo2'];
+$fecha=$_POST['d_acuerdo'];
+$fecha1=$_POST['f_acuerdo1'];
+$fecha2=$_POST['f_acuerdo2'];
+$tipo=$_POST['tipo_acuerdo'];
+    //busquedas por acuerdos
+    if(!empty($id)){
+        $sql = "SELECT * from acuerdos WHERE id='$id'";
+        $ejecutar = $conexion->query($sql);
+    }
+
+    if($id1!='' && $id2!=''){
+        $sql = "SELECT * from acuerdos WHERE id BETWEEN '$id1' AND '$id2'";
+        $ejecutar = $conexion->query($sql);
+    }
+    //busquedas por fechas
+     if(!empty($fecha)){
+        $sql = "SELECT * from acuerdos WHERE fecha='$fecha'";
+        $ejecutar = $conexion->query($sql);
+    }
+
+    if($fecha1!='' && $fecha2!=''){
+        $sql = "SELECT * from acuerdos WHERE fecha BETWEEN '$fecha1' AND '$fecha2'";
+        $ejecutar = $conexion->query($sql);
+    }
+      //busquedas por tipo
+     if(!empty($tipo)){
+        $sql = "SELECT * from acuerdos WHERE tipo_acuerdo='$tipo'";
+        $ejecutar = $conexion->query($sql);
+    }
+
+ ?>
+
 <?php include"template/header.php"; ?>
         <!-- Page wrapper  -->
         <div class="page-wrapper">
@@ -39,7 +79,6 @@
 
                             </div>
                             <div class="card-body">
-
                                 <div class="row" >
                                     <div class="col-md-12">
                                 <div class="table-responsive m-t-40">
@@ -55,11 +94,6 @@
                                         </thead>
                                         <tbody>
                                         	<?php
-                                            if(!isset($conexion)){ include("../config/conexion.php");}
-                                            $sql = "SELECT * from acuerdos";
-
-                                            $ejecutar = $conexion->query($sql);
-                                            $cont=0;
                                             while($reg = $ejecutar->fetch_assoc()){
                                                 $id_a= ($reg["id"]);
                                                 echo "<tr>";
@@ -74,6 +108,8 @@
 
                                                   print_r($reg2['nombre']);
                                                   echo "<br>";
+
+                                                  //echo "<td>".($reg2["nombre"])."</td>";
                                                 }
                                                 echo "</td>";
                                                 echo "<td><a class='btn btn-primary' href="."acuerdos_ver.php?id=".$reg['id']."><i class='fa fa-eye'> Ver</i></a>  <a class='btn btn-danger' href="."logica/acuerdos_delete.php?id=".$reg['id']."><i class='fa fa-trash'> Eliminar</i></a></td>";

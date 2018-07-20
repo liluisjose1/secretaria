@@ -131,6 +131,13 @@
                                 <li><a href="acuerdos_view.php">Ver / Eliminar </a></li>
                             </ul>
                         </li>
+                        <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-search"></i><span class="hide-menu">Busquedas</span></a>
+                            <ul aria-expanded="false" class="collapse">
+                              <li><a href="b_tipo.php">Tipo</a></li>
+                              <li><a href="b_fecha.php">Fechas</a></li>
+                              <li><a href="b_nacuerdo.php">Número de Acuerdo</a></li>
+                            </ul>
+                        </li>
                         <br>
                         <li class="nav-label">Configuración</li>
                         <li> <a class="has-arrow" href="#" aria-expanded="false"><i class="fa fa-wrench"></i><span class="hide-menu">Mantenimiento</span></a>
